@@ -17,14 +17,14 @@ TARGET = NxVideoPlayer
 TEMPLATE = app
 
 # Add Playler Tool Library
-LIBS += -L${SDKTARGETSYSROOT}/usr/lib/ -lnx_drm_allocator -lnx_video_api
+LIBS += -lnx_drm_allocator -lnx_video_api
 LIBS += -L$$PWD/../libnxplayer/lib/32bit -lnxmpmanager -lnxfilterhelper -lnxfilter
 
 # Add icu libraries
 LIBS += -licuuc -licui18n
+LIBS += -lasound
 
-
-INCLUDEPATH += ${SDKTARGETSYSROOT}/usr/include/ ../libnxplayer/include
+INCLUDEPATH += ../libnxplayer/include
 
 SOURCES += main.cpp\
         mainwindow.cpp \
